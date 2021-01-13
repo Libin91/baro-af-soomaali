@@ -36,8 +36,8 @@ function QaybLibaaxQuiz() {
 			questionText: 'Who is the second animal charged with dividing up the meat?',
 			answerOptions: [
 				{ answerText: 'The Fox', isCorrect: false },
-				{ answerText: 'The Jackal', isCorrect: false },
-				{ answerText: 'The Hyena', isCorrect: true },
+				{ answerText: 'The Jackal', isCorrect: true },
+				{ answerText: 'The Hyena', isCorrect: false },
 				
 			],
 		},
@@ -70,7 +70,13 @@ function QaybLibaaxQuiz() {
         } else {
             setShowScore(true);
         };
-    };
+	};
+	
+	const handleResetButton = (score) => {
+		setCurrentQuestion(0);
+		setShowScore(false);
+		setScore(0);
+	};
     
     return (
 
@@ -79,6 +85,7 @@ function QaybLibaaxQuiz() {
 			
 			{showScore ? (
 				<div className='score-section'>You scored {score} out of {questions.length}
+				<button onClick={()=> handleResetButton(score)}>Try again!</button>
 				<button><NavLink to ="/pages/qayblibaax">Go back to story</NavLink></button>
 				<button><NavLink to = "/pages/qolofdiin">Go to the next story</NavLink></button>
 				</div>

@@ -58,7 +58,8 @@ function DhegdheerQuiz() {
 
 	const [showScore, setShowScore] = useState(false);
 
-    const [score,setScore] = useState(0);
+	const [score,setScore] = useState(0);
+	
 
 	const handleAnswerButtonClick = (isCorrect) => {
 		if (isCorrect === true) {
@@ -72,7 +73,13 @@ function DhegdheerQuiz() {
         } else {
             setShowScore(true);
         };
-    };
+	};
+	
+	const handleResetButton = (score) => {
+		setCurrentQuestion(0);
+		setShowScore(false);
+		setScore(0);
+	};
     
 
 	return (
@@ -80,6 +87,7 @@ function DhegdheerQuiz() {
 			
 			{showScore ? (
 				<div className='score-section'>You scored {score} out of {questions.length}
+				<button onClick={()=> handleResetButton(score)}>Try again!</button>
 				<button><NavLink to ="/pages/dhegdheer">Go back to story</NavLink></button>
 				<button><NavLink to = "/pages/qayblibaax">Go to the next story</NavLink></button>
 				</div>

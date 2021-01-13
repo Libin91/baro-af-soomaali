@@ -69,12 +69,20 @@ function QolofDiinQuiz() {
         } else {
             setShowScore(true);
         };
-    };
+	};
+	
+	const handleResetButton = (score) => {
+		setCurrentQuestion(0);
+		setShowScore(false);
+		setScore(0);
+	};
+
     return (
         <div className='quiz'>
 			
 			{showScore ? (
 				<div className='score-section'>You scored {score} out of {questions.length}
+				<button onClick={()=> handleResetButton(score)}>Try again!</button>
 				<button><NavLink to ="/pages/qolofdiin">Go back to story</NavLink></button>
 				<button><NavLink to = "/stories">Go to Stories Home</NavLink></button>
 				</div>
