@@ -10,7 +10,7 @@ const app = express();
 mongoose.Promise = global.Promise;
 mongoose.connect(
   process.env.MONGODB_URI ||
-    `mongodb://localhost:27017/black-codher-personal-project`,
+    `mongodb://localhost:27017/Black-Codher`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

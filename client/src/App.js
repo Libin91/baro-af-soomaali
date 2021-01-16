@@ -7,7 +7,6 @@ import Home from './Home';
 import Header from './Header';
 import About from './About';
 import Stories from './Stories';
-import Contact from './Contact';
 import Footer from './Footer';
 //Pages
 import Dhegdheer from './pages/Dhegdheer';
@@ -69,7 +68,6 @@ function App() {
       <Route exact path ="/" component = { Home } />
       <Route path ="/about" component = { About } />
       <Route path = "/stories" component = { Stories } />
-      <Route path ="/contact" component = { Contact } /> 
       <Route path ="/pages/dhegdheer" component = { Dhegdheer } />
       <Route path ="/pages/qayblibaax" component = { QaybLibaax } />
       <Route path = "/pages/qolofdiin" component = { QolofDiin } />

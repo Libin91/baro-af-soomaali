@@ -31,13 +31,7 @@ function Stories() {
                   <img src = { diin } alt = "a turtle" height = {200} width = {200} />
               </div>
             </div>
-              <div className="column">
-               <div className="card">
-                   <h2>Coming soon!</h2>
-            
-                   
-               </div>
-            </div>
+              
            </div>
         </div>
     )
