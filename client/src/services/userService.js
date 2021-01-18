@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default {
   getAll: async () => {
-    const res = await axios.get(`/api/user`);
+    const res = await axios.get(`/api/signUp`);
     return res.data || [];
   },
 };

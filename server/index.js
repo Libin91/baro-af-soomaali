@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 // IMPORT YOUR MODELS
-require('./models/Users');
+require('./models/signUpSchema');
 
 const app = express();
 
@@ -14,7 +14,7 @@ mongoose.connect(
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-  }
+  }, () => console.log('Database connected')
 );
 
 app.use(bodyParser.json());

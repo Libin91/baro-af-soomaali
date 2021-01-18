@@ -40,7 +40,7 @@ function App() {
     setusers(res);
   };
 
-  const renderUser = (user) => {
+  /* const renderUser = (user) => {
     return (
       <li key={user._id}>
         <h3>
@@ -50,17 +50,17 @@ function App() {
         <p>{user.location}</p>
       </li>
     );
-  };
+  }; */
 
   return (
     <div>
-      <ul>
+      {/* <ul>
         {users && users.length > 0 ? (
           users.map((user) => renderUser(user))
         ) : (
           <p></p>
         )}
-      </ul>
+      </ul> */}
 
       <BrowserRouter>
       <div className="App">

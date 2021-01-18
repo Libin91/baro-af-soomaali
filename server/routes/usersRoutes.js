@@ -1,39 +1,49 @@
+const { request, response } = require('express');
 const mongoose = require('mongoose');
-const User = mongoose.model('users');
+const signUpCopy = mongoose.model('signUp');
 
 module.exports = (app) => {
-  app.get(`/api/user`, async (req, res) => {
-    const persons = await User.find();
+ /*  app.get(`/api/signUp`, async (req, res) => {
+    const persons = await signUp.find();
     return res.status(200).send(persons);
-  });
+  }); */
 
-  app.post(`/api/user`, async (req, res) => {
-    const user = await User.create(req.body);
-    return res.status(201).send({
+  app.post(`/api/signUp`,  (req, res) => {
+    const signedUpUser = new signUpCopy({
+      email:request.body.email
+    })
+    signedUpUser.save()
+    .then(data =>{
+      response.json(data)
+    })
+    .catch(error =>{
+      response.json(error)
+    }) 
+    /* return res.status(201).send({
       error: false,
-      user,
-    });
+      signUp,
+    }); */
   });
 
-  app.put(`/api/user/:id`, async (req, res) => {
+ /*  app.put(`/api/signUp/:id`, async (req, res) => {
     const { id } = req.params;
 
-    const user = await User.findByIdAndUpdate(id, req.body);
+    const signUp = await signUp.findByIdAndUpdate(id, req.body);
 
     return res.status(202).send({
       error: false,
       user,
     });
-  });
+  }); */
 
-  app.delete(`/api/user/:id`, async (req, res) => {
+  /* app.delete(`/api/signUp/:id`, async (req, res) => {
     const { id } = req.params;
 
-    const user = await User.findByIdAndDelete(id);
+    const signUp = await signUp.findByIdAndDelete(id);
 
     return res.status(202).send({
       error: false,
       user,
-    });
-  });
+    }); */
+  // });
 };

@@ -11,6 +11,7 @@ function Home() {
       </p>
         <div className="signupform">
           <p>Subscribe to receive our newsletter with advice on how to improve your Somali, tips and tricks and other fun stuff!</p>
+          <form method="POST" action="/email" />
           <input placeholder="Your email address" type="email" />
           <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
 
