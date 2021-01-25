@@ -27,8 +27,9 @@ function Stories() {
             <div className="column">
               <div className="card">
                   <h2>Qolof Diin</h2>
-                  <button><NavLink to = "/pages/qolofdiin">Read</NavLink></button>
                   <img src = { diin } alt = "a turtle" height = {200} width = {200} />
+                  <button><NavLink to = "/pages/qolofdiin">Read</NavLink></button>
+                  
               </div>
             </div>
               

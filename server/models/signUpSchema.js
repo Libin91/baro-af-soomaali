@@ -2,8 +2,14 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const signUpSchema = new Schema({
-  email: String,
-  date: Date
+  email:{
+    type: String,
+    required: true
+  },
+  date:{
+    type: Date,
+    default: Date.now
+  }
 });
 
-mongoose.model('signUp', signUpSchema);
+mongoose.model('signUpTable', signUpSchema);

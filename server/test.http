@@ -1,6 +1,7 @@
 POST http://localhost:5000/api/signUp
 Content-Type: application/json
 
+
 {
-    "email":"aisha@mail.com"
+    "email": "pincopallo@mail.com"
 }
