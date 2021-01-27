@@ -52,6 +52,7 @@ function DhegdheerQuiz() {
 
 			],
 		},
+		
 	];
 	
 	const [currentQuestion, setCurrentQuestion] = useState(0);
