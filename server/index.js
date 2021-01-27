@@ -1,12 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-
+const cors = require ('cors');
 // IMPORT YOUR MODELS
 require('./models/signUpSchema');
 
 const app = express();
-
+app.use(cors());
 mongoose.Promise = global.Promise;
 mongoose.connect(
   process.env.MONGODB_URI ||

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 
 // import ReactDOM from 'react-dom';
@@ -24,8 +24,7 @@ import QaybLibaaxQuiz from './pages/quizzes/QaybLibaaxQuiz';
 import QolofDiinQuiz from './pages/quizzes/QolofDiinQuiz';
 
 
-// SERVICES
-import userService from './services/userService';
+
 
 function App() {
   return (
