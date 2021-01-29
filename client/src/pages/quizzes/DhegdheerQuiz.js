@@ -87,7 +87,7 @@ function DhegdheerQuiz() {
 		<div className='quiz'>
 			
 			{showScore ? (
-				<div className='score-section'>You scored {score} out of {questions.length}
+				<div className='score-section'><p>You scored {score} out of {questions.length}</p>
 				<button onClick={()=> handleResetButton(score)}>Try again!</button>
 				<button><NavLink to ="/pages/dhegdheer">Go back to story</NavLink></button>
 				<button><NavLink to = "/pages/qayblibaax">Go to the next story</NavLink></button>

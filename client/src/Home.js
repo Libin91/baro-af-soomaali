@@ -11,8 +11,8 @@ function Home() {
         with a quiz! 
       </p>
       <div className="newsletter">
-        <p>If you want to receive our newsletter with tips and tricks on how to improve you Somali sign up!</p>
-          <SignUp />
+      <p>Sign up to receive tips on how to improve your Somali!</p>        
+       <SignUp />
       </div>
         </div>
     )

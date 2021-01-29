@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import "./SignUp.css"
 
 
 
@@ -27,7 +28,7 @@ export default class SignUp extends Component {
             email: this.state.email
         }
         axios.post('http://localhost:5000/api/signUp', registered)
-        .then(response => console.log(response.data))
+        .then(response => console.log(response.data), alert("You've successfully submitted your email!"))
 
        this.setState({
            email: ''
@@ -39,6 +40,7 @@ export default class SignUp extends Component {
                 <div className="form-container">
                     <form onSubmit={this.onSubmit}>
                         <input type="text"
+                        className="email"
                         placeholder= "email"
                         onChange= {this.changeEmail}
                         value = {this.state.email}
