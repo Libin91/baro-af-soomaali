@@ -1,23 +1,13 @@
-import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import { GiBookAura } from 'react-icons/gi'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 import "./Header.css"
 
 
 function Header() {
-    /* const [click, setClick] = useState(false);
-
-    const handleClick = () => setClick(!click);*/
+    
     return ( 
         <div>
            <header>
-               {/* <Link to = "/" className="main-nav-logo">
-                        <GiBookAura className="main-nav-icon" />
-               </Link>
-                    <div className="menu-icon" onClick={handleClick}>
-                        {click ? <FaTimes /> : <FaBars />}
-    </div>*/}
 
                 <ul className="main-nav"> 
                     
