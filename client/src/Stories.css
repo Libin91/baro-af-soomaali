@@ -8,23 +8,20 @@ body {
 
 .cards {
   display: flex;
-  justify-content: space-between;
-  grid-gap: 10px;
-  /*! gap: 10px; */
+  justify-content: center;
+  grid-gap: 1rem;
   flex-wrap: wrap;
   width: 100%;
-  /*! padding: 10px; */
-  /*! align-items: center; */
-  /*! flex-direction: column; */
+  padding: 3rem;
 }
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1em;
-  flex: 0 0 250px;
+  flex: 1 0 250px;
   background: lightblue;
-  min-width: 200px;
+  align-items: center;
 }
 .card-title {
   font-size: 24px;
@@ -33,11 +30,11 @@ body {
 .card img {
   margin-bottom: 35px;
   max-width: 100%;
-  /*! min-height: auto; */
 }
 .cardbtn {
   display: inline-block;
   margin-top: auto;
+  width: 100%;
 }
 .cardbtn a {
   color: inherit;
@@ -56,5 +53,12 @@ body {
   }
   .cardbtn {
     width: 100%;
+  }
+}
+
+@media  (max-width: 500px) {
+  .app{
+    padding-left: 0;
+    padding-right: 0;
   }
 }
