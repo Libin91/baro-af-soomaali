@@ -8,7 +8,12 @@
     "client": "npm start --prefix client",
     "server": "nodemon server/index.js",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build"
+    
+
   },
   "keywords": [],
   "author": "",
@@ -17,6 +22,7 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "develop": "^1.0.0",
+    "dotenv": "^9.0.1",
     "express": "^4.17.1",
     "mongoose": "^5.10.18"
   },
