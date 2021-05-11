@@ -10,7 +10,7 @@ app.use(cors());
 mongoose.Promise = global.Promise;
 mongoose.connect(
   process.env.MONGODB_URI ||
-    `mongodb+srv://Libin:tomodachi@cluster0.yyf2c.mongodb.net/Black-Codher?retryWrites=true&w=majority`,
+    `mongodb://localhost:27017/Black-Codher`,  
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -25,12 +25,10 @@ require('./routes/usersRoutes')(app);
 // Accessing the path module
 const path = require("path");
 
-// Step 1:
-app.use(express.static(path.resolve(__dirname, "./client/build")));
-// Step 2:
-app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
-});
+//heroku ting
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
