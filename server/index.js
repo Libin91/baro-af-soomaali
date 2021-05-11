@@ -17,6 +17,7 @@ mongoose.connect(
   }, () => console.log('Database connected')
 );
 
+
 app.use(bodyParser.json());
 
 // IMPORT YOUR ROUTES
